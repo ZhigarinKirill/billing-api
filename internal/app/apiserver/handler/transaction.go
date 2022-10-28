@@ -94,8 +94,6 @@ func (h *Handler) completeReservationTransaction(c *gin.Context) {
 // Report generation
 func (h *Handler) getReport(c *gin.Context) {
 
-	// Request body decoding
-
 	year, err := strconv.Atoi(c.Query("year"))
 	if err != nil {
 		newErrorResponse(c, http.StatusBadRequest, fmt.Sprintf("invalid parametres: %s", err.Error()))
